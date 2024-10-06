@@ -1,0 +1,95 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FF4500; /* Olovrang */
+    color: white;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.movie {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.movie h3 {
+    margin: 10px 0;
+}
+
+.movie video {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+    border: 3px solid #32CD32; /* Och yashil */
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+}
